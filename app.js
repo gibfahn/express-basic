@@ -5,7 +5,7 @@ const app = express();
 /*
 app.use(express.static(__dirname + '/public'));
 */
-const port = 'PORT' in process.env ? process.env.PORT : 3000
+const port = 'PORT' in process.env ? process.env.PORT : 8080
 
 app.listen(port, function () {
   console.log(`Example app listening on port ${this.address().port}!`)
