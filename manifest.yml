@@ -1,0 +1,17 @@
+declared-services:
+  # TODO(gib): Should we include cloudant in the basic app?
+  TodoListCloudantDatabase:
+    label: cloudantNoSQLDB
+    plan: Lite
+applications:
+  # TODO(gib): Auto insert appname
+  name: <%= appname %>
+  memory: 512M
+  instances: 1
+  random-route: true
+  disk_quota: 1024M
+  buildpack: sdk-for-nodejs
+  command: npm start
+  services:
+  - TodoListCloudantDatabase
+  # TODO(gib): Should we include other services?

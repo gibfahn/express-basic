@@ -1,0 +1,16 @@
+---
+name: "app toolchain"
+description: "Add tools to this toolchain as needed."
+version: 1.0
+required:
+  # TODO(gib): what do we actually need?
+  - deploy
+  - openwhisk
+  - coveralls
+
+# Github repos
+app-repo:
+  service_id: githubpublic
+  parameters:
+    repo_name: <%= appname %>
+    repo_url: "https://github.com/<%= username %>/<%= appname %>.git"
