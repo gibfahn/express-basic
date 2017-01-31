@@ -1,3 +1,4 @@
+---
 applications:
   # TODO(gib): Auto insert appname
   name: <%= appname %>
@@ -17,9 +18,8 @@ applications:
     BLUEMIX_ENABLED: true
     NODE_ENV: production
 
-
 declared-services:
   # TODO(gib): Should we include cloudant in the basic app?
   TodoListCloudantDatabase:
     label: cloudantNoSQLDB
-    plan: Lite
+    plan: Shared
