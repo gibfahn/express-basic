@@ -1,7 +1,7 @@
 ---
 applications:
   # TODO(gib): Auto insert appname
-  name: <%= appname %>
+  name: <%= config.appname %>
   memory: 512M
   instances: 3
   timeout: 180
@@ -11,15 +11,17 @@ applications:
   buildpack: sdk-for-nodejs
   command: npm start
   services:
-  - TodoListCloudantDatabase
-  # TODO(gib): Should we include other services?
-
+    <% for(let service in config.services) {%>
+    <%= config.appname %>-<%= config.services[service]%>
+    <% } %>
   env:
     BLUEMIX_ENABLED: true
     NODE_ENV: production
 
 declared-services:
-  # TODO(gib): Should we include cloudant in the basic app?
-  TodoListCloudantDatabase:
-    label: cloudantNoSQLDB
-    plan: Shared
+  <% for(let service in config.services) {%>
+  <%= config.appname %>-<%= config.services[service] %>:
+    <% for(let property in config.services[service]) {%>
+    <%= property %>: <%= config.services[service][property] %>
+    <% } %>
+  <% } %>

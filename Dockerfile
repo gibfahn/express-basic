@@ -4,9 +4,9 @@ FROM registry.ng.bluemix.net/ibmnode
 	ADD . /app
 
 	ENV NODE_ENV production
-	ENV PORT <%= port %>
+	ENV PORT <%= config.port %>
 
-	EXPOSE <%= port %>
+	EXPOSE <%= config.port %>
 
 	WORKDIR "/app"
 
