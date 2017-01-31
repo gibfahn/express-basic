@@ -1,9 +1,22 @@
 {
-    "name": "sample-express",
-    "dependencies": {
-        "express": "^4.14.0"
+    "name": "express-basic",
+    "version": "0.0.1",
+    "description": "A generated Bluemix application",
+    "private": true,
+    "license": "SEE LICENSE IN License.txt",
+    "engines": {
+      "node": "^6.9.0",
+      "npm": "^3.9.12"
     },
     "scripts": {
-        "start": "node app.js"
+        "start": "node app.js",
+        "test": "tap --timeout 90 \"test/**/test-*.js\""
+    },
+    "dependencies": {
+        "express": "^4.14.0",
+        "cfenv": "^1.0.3"
+    },
+    "devDependencies": {
+        "tap": "^10.0.0"
     }
 }
