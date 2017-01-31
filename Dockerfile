@@ -4,6 +4,7 @@ FROM registry.ng.bluemix.net/ibmnode
 	ADD . /app
 
 	ENV NODE_ENV production
+	ENV PORT <%= port %>
 
 	EXPOSE <%= port %>
 
