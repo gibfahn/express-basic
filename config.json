@@ -1,0 +1,15 @@
+{
+    "port": 8080,
+    "appname": "express-basic",
+    "services": {
+        "cloudant": {
+            "label": "cloudantNoSQLDB",
+            "plan": "shared"
+        },
+        "mongoDB": {
+            "label": "mongoDB",
+            "plan": "shared"
+        }
+    }
+}
+
