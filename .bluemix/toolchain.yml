@@ -1,4 +1,7 @@
 ---
+# TODO(gib): Work out whether we even need these files
+# This is currently just sample code from other apps, we probably won't need
+# all or any of it.
 name: "app toolchain"
 description: "Add tools to this toolchain as needed."
 version: 1.0

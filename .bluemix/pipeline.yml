@@ -1,4 +1,7 @@
 ---
+# TODO(gib): Work out whether we even need these files
+# This is currently just sample code from other apps, we probably won't need
+# all or any of it.
 stages:
 - name: <%= appname %>
   inputs:
