@@ -10,6 +10,11 @@
             "label": "mongoDB",
             "plan": "shared"
         }
+    },
+    "concerns": {
+        "monitoring",
+        "autoscaling",
+        "appid"
     }
 }
 

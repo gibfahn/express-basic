@@ -1,6 +1,6 @@
 FROM registry.ng.bluemix.net/ibmnode
 
-# TODO(gib): should this change with the appname?
+# TODO(gib): Should this change with the appname?
 	ADD . /app
 
 	ENV NODE_ENV production
@@ -10,4 +10,7 @@ FROM registry.ng.bluemix.net/ibmnode
 
 	WORKDIR "/app"
 
+# TODO(gib): Should we use strong-supervisor, eg:
+#   RUN npm install strong-supervisor
+#   CMD ./node_modules/.bin/sl-run .
 	CMD ["npm", "start"]

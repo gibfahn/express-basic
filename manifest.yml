@@ -2,6 +2,7 @@
 applications:
   # TODO(gib): Auto insert appname
   name: <%= config.appname %>
+  # TODO(gib): Make sure these can be overridden from the Bluemix control panel
   memory: 512M
   instances: 3
   timeout: 180
