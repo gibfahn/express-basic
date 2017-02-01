@@ -5,16 +5,17 @@
     "private": true,
     "license": "SEE LICENSE IN License.txt",
     "engines": {
-      "node": "^6.9.0",
-      "npm": "^3.9.12"
+        "node": "^6.9.0",
+        "npm": "^3.9.12"
     },
     "scripts": {
         "start": "node app.js",
         "test": "tap --timeout 90 \"test/**/test-*.js\""
     },
     "dependencies": {
-        "express": "^4.14.0",
-        "cfenv": "^1.0.3"
+        "appmetrics": "^1.2.0",
+        "cfenv": "^1.0.3",
+        "express": "^4.14.0"
     },
     "devDependencies": {
         "tap": "^10.0.0"

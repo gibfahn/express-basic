@@ -1,3 +1,7 @@
+// Addon: monitoring
+const appmetrics = require('appmetrics');
+const monitoring = appmetrics.monitor();
+
 const express = require('express');
 const app = express();
 
