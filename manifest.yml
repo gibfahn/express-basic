@@ -1,28 +1,10 @@
 ---
 applications:
-  # TODO(gib): Auto insert appname
-  name: <%= config.appname %>
-  # TODO(gib): Make sure these can be overridden from the Bluemix control panel
+- name: <%= appname %>
   memory: 512M
-  instances: 3
-  timeout: 180
-  path: .
-  random-route: true
+  instances: 1
   disk_quota: 1024M
+  timeout: 180
+  random-route: true
   buildpack: sdk-for-nodejs
   command: npm start
-  services:
-    <% for(let service in config.services) {%>
-    <%= config.appname %>-<%= config.services[service]%>
-    <% } %>
-  env:
-    BLUEMIX_ENABLED: true
-    NODE_ENV: production
-
-declared-services:
-  <% for(let service in config.services) {%>
-  <%= config.appname %>-<%= config.services[service] %>:
-    <% for(let property in config.services[service]) {%>
-    <%= property %>: <%= config.services[service][property] %>
-    <% } %>
-  <% } %>

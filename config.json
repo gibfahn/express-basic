@@ -1,24 +1,15 @@
 {
-    "version": 1,
+    "apptype" : "basic",
     "port": 8080,
-    "appname": "express-basic",
-    "lang": "Node.js",
-    "buildpack": "sdk-for-nodejs",
+    "appname": "express-basic-test",
     "services": {
         "cloudant": {
             "label": "cloudantNoSQLDB",
-            "plan": "shared",
-            "timeout": 90
+            "plan": "shared"
         },
         "mongoDB": {
             "label": "mongoDB",
             "plan": "shared"
         }
-    },
-    "concerns": {
-        "monitoring": true,
-        "autoscaling": true,
-        "appid": true
     }
 }
-

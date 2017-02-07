@@ -1,16 +1,14 @@
-// CONCERN: monitoring - begin
-// TODO(gib): Should we be using strong-supervisor instead?
+// Addon: monitoring
 const appmetrics = require('appmetrics');
 const monitoring = appmetrics.monitor();
-// CONCERN: monitoring - end
 
 const express = require('express');
 const app = express();
 
-// APPLICATION: web - begin
+// Addon: web
+/*
 app.use(express.static(__dirname + '/public'));
-// APPLICATION: web - begin
-
+*/
 const port = 'PORT' in process.env ? process.env.PORT : 8080
 
 app.listen(port, function () {

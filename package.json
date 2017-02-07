@@ -1,9 +1,8 @@
 {
-    "name": "express-basic",
+    "name": "<%= appname %>",
     "version": "1.0.0",
     "description": "A generated Bluemix application",
     "private": true,
-    "license": "TODO(gib): will there be a license provided from the config?",
     "engines": {
         "node": "^6.9.0",
         "npm": "^3.9.12"
