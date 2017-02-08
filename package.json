@@ -4,20 +4,15 @@
   "description": "A generated Bluemix application",
   "private": true,
   "engines": {
-    "node": "^6.9.0",
-    "npm": "^3.9.12"
+    "node": "^6.9.0"
   },
   "scripts": {
     "start": "node app.js",
-    "test": "tap --timeout 90 \"test/**/test-*.js\""
   },
   "dependencies": {
     "appmetrics": "^1.2.0",
     "cfenv": "^1.0.3",
     "cloudant": "^1.7.1",
     "express": "^4.14.0"
-  },
-  "devDependencies": {
-    "tap": "^10.0.0"
   }
 }
