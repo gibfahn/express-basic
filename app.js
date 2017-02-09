@@ -1,6 +1,14 @@
 // *** OPTION: Monitoring ***
 require('appmetrics-dash').start()
 
+const express = require('express');
+const app = express();
+
+// *** APPTYPE: WEB ***
+/*
+app.use(express.static(__dirname + '/public'));
+*/
+
 // *** OPTION: CLOUDANT ***
 // Load the Cloudant library.
 // const Cloudant = require('cloudant');
@@ -20,8 +28,10 @@ require('appmetrics-dash').start()
 // var MongoClient = require('mongodb').MongoClient,
 //   format = require('util').format;
 //
-// if (!process.env['PORT']) {
-//   port = '27017';
+// if (process.env['PORT']) {
+//  port = process.env['PORT'];
+// } else {
+//  port = '27017';
 // }
 //
 // hostname = process.env['MONGO_HOSTNAME'];
@@ -37,13 +47,32 @@ require('appmetrics-dash').start()
 //     db.close();
 // });
 
-const express = require('express');
-const app = express();
+// *** OPTION: REDIS
+// const redis = require('redis');
+//
+// if (process.env['PORT']) {
+//   port = process.env['PORT'];
+// } else {
+//   port = '6379';
+// }
+// if (process.env['HOSTNAME']) {
+//   host = process.env['HOSTNAME'];
+// } else {
+//   host = '127.0.0.1';
+// }
+//
+// var client = redis.createClient(port, host);
+// // if you'd like to select database 3, instead of 0 (default), call
+// // client.select(3, function() { /* ... */ });
+//
+// client.on('error', function (err) {
+//     console.log('Error ' + err);
+// });
+// client.on('connect', function() {
+//     console.log('Successfully connected to the database');
+// });
+// client.quit();
 
-// *** APPTYPE: WEB ***
-/*
-app.use(express.static(__dirname + '/public'));
-*/
 const port = 'PORT' in process.env ? process.env.PORT : 8080
 
 // TODO: VCAP_SERVICES

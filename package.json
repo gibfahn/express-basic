@@ -1,5 +1,5 @@
 {
-  "name": "<%= appname %>",
+  "name": "appname",
   "version": "1.0.0",
   "description": "A generated Bluemix application",
   "private": true,
@@ -7,7 +7,7 @@
     "node": "^6.9.0"
   },
   "scripts": {
-    "start": "node app.js",
+    "start": "node app.js"
   },
   "dependencies": {
     "appmetrics": "^1.2.0",
