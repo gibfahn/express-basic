@@ -16,6 +16,27 @@ require('appmetrics-dash').start()
 //   console.log('All my databases: %s', allDbs.join(', '))
 // });
 
+// *** OPTION: MONGODB ***
+// var MongoClient = require('mongodb').MongoClient,
+//   format = require('util').format;
+//
+// if (!process.env['PORT']) {
+//   port = '27017';
+// }
+//
+// hostname = process.env['MONGO_HOSTNAME'];
+// dbName = process.env['MONGO_DBNAME'];
+//
+// MongoClient.connect('mongodb://' + hostname + ':' + port + '/' + dbName,
+// function (err, db) {
+//     if (err) {
+//         throw err;
+//     } else {
+//         console.log("Successfully connected to the database");
+//     }
+//     db.close();
+// });
+
 const express = require('express');
 const app = express();
 
