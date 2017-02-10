@@ -1,6 +1,6 @@
 ---
 applications:
-- name: <%= appname %>
+- name: gib-express-basic
   memory: 512M
   instances: 1
   disk_quota: 1024M
@@ -8,3 +8,11 @@ applications:
   random-route: true
   buildpack: sdk-for-nodejs
   command: npm start
+  services:
+  - Cloudant
+  timeout: 180
+
+declared-services:
+  Cloudant:
+    label: cloudantNoSQLDB
+    plan: Lite

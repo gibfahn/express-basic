@@ -6,7 +6,7 @@ FROM registry.ng.bluemix.net/ibmnode
 	ENV NODE_ENV production
 	ENV PORT <%= config.port %>
 
-	EXPOSE <%= config.port %>
+	EXPOSE 8080
 
 	WORKDIR "/app"
 

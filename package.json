@@ -1,10 +1,9 @@
 {
-  "name": "<%= appname %>",
+  "name": "gib-express-basic",
   "version": "1.0.0",
   "description": "A generated Bluemix application",
   "private": true,
   "engines": {
-    "TODO": "Are engines used by cf/bluemix when preparing the environment?",
     "node": "^6"
   },
   "scripts": {
@@ -17,9 +16,9 @@
     "cloudant": "^1.7.1",
     "express": "^4.14.0"
   },
-  "author": "<%= appname %>",
+  "author": "Gib",
   "repository": {
     "type": "git",
-    "url": "https://github.com/<%= username %>/<%= appname %>"
+    "url": "https://github.com/gibfahn/express-basic"
   }
 }
