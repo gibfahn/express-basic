@@ -1,10 +1,11 @@
 {
-  "name": "appname",
+  "name": "<%= appname %>",
   "version": "1.0.0",
   "description": "A generated Bluemix application",
   "private": true,
   "engines": {
-    "node": "^6.9.0"
+    "TODO": "Are engines used by cf/bluemix when preparing the environment?",
+    "node": "^6"
   },
   "scripts": {
     "start": "node app.js"
@@ -14,5 +15,10 @@
     "cfenv": "^1.0.3",
     "cloudant": "^1.7.1",
     "express": "^4.14.0"
+  },
+  "author": "<%= appname %>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/<%= username %>/<%= appname %>"
   }
 }

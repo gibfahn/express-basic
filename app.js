@@ -79,5 +79,5 @@ const port = 'PORT' in process.env ? process.env.PORT : 8080
 //const services = JSON.parse(process.env.VCAP_SERVICES || "{}");
 
 app.listen(port, function() {
-  console.log(`Example app listening on port ${this.address().port}!`)
+  console.log(`Example app listening on ${this.address().address}:${this.address().port}!`)
 })
