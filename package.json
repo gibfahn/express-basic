@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "appmetrics": "^1.2.0",
+    "appmetrics-dash": "^1.0.0",
     "cfenv": "^1.0.3",
     "cloudant": "^1.7.1",
     "express": "^4.14.0"
