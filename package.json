@@ -14,7 +14,9 @@
     "appmetrics-dash": "^1.0.0",
     "cfenv": "^1.0.3",
     "cloudant": "^1.7.1",
-    "express": "^4.14.0"
+    "express": "^4.14.0",
+    "mongodb": "^2.2.22",
+    "redis": "^2.6.5"
   },
   "author": "Gib",
   "repository": {

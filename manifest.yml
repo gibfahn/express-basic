@@ -10,9 +10,14 @@ applications:
   command: npm start
   services:
   - Cloudant
+#  - Mongo
   timeout: 180
 
 declared-services:
   Cloudant:
     label: cloudantNoSQLDB
     plan: Lite
+# TODO(gib): Work out what combination to use. mongo/Default doesn't work.
+#  Mongo:
+#    label: mongodb
+#    plan: 100
